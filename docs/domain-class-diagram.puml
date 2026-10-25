@@ -1,0 +1,96 @@
+@startuml
+
+class Room 
+{
+  -int _number
+  -RoomType _type
+  -RoomStatus _status
+  +int Number
+  +RoomType Type
+  +RoomStatus Status
+  +ChangeStatus(RoomStatus): void
+}
+
+class Request
+{
+  -int _id
+  -string _userName
+  -RoomType _roomType
+  -DateOnly _dateStarting
+  -int _quantityDays
+  -RequestStatus _status
+  -int? _roomNumber
+  +int Id
+  +string UserName
+  +RoomType RoomType
+  +DateOnly DateStarting
+  +int QuantityDays
+  +RequestStatus Status
+  +int? RoomNumber
+  +ChangeStatus(RequestStatus): void
+  +AssignRoom(int): void
+}
+
+class Notification
+{
+  -string _userName
+  -DateOnly _date
+  -string _message
+  +string UserName
+  +DateOnly Date
+  +string Message
+}
+
+class User
+{
+  -string _name
+  -string _password
+  -Role _role
+  +string Name
+  +string Password
+  +Role Role
+}
+
+enum RequestStatus
+{
+  Unprocessed
+  Accepted
+  Rejected
+  Completed
+}
+
+enum RoomType
+{
+  Single
+  Double
+  Triple
+  Quadruple
+}
+
+enum RoomStatus
+{
+  Open
+  Closed
+}
+
+enum RequestSortField
+{
+  UserName
+  DateStarting
+  QuantityDays
+  RoomNumber
+}
+
+enum Role
+{
+  User
+  Admin
+}
+
+Room --> RoomType
+Room --> RoomStatus
+Request --> RequestStatus
+Request --> RoomType
+User --> Role
+
+@enduml
