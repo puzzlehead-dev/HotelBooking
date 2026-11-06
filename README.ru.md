@@ -1,5 +1,9 @@
 # HotelBooking
 
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white) ![.NET 9](https://img.shields.io/badge/.NET-9.0-512BD4?style=flat) ![xUnit](https://img.shields.io/badge/xUnit-2.9-512BD4?style=flat) ![License](https://img.shields.io/badge/license-MIT-green)
+
+[![Build and Test](https://github.com/puzzlehead-dev/HotelBooking/actions/workflows/build.yml/badge.svg)](https://github.com/puzzlehead-dev/HotelBooking/actions/workflows/build.yml)
+
 Консольное приложение для системы бронирования в отеле на C# / .NET 9
 
 [Read in English](README.md)
